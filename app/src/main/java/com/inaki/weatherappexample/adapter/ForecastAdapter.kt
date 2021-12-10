@@ -60,4 +60,11 @@ class ForecastViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     val weather: TextView = itemView.findViewById(R.id.weather_forecast)
     val temperature: TextView = itemView.findViewById(R.id.forecast_temp)
     val forecastDate: TextView = itemView.findViewById(R.id.forecast_date)
+//    val description: TextView = itemView.findViewById(R.id.description)
+//    val pressure: TextView = itemView.findViewById(R.id.pressure)
+//    val feels_like: TextView = itemView.findViewById(R.id.feels_like)
+//    val humidity: TextView = itemView.findViewById(R.id.humidity)
+//    val temp: TextView = itemView.findViewById(R.id.temp)
+//    val max: TextView = itemView.findViewById(R.id.max)
+//    val min: TextView = itemView.findViewById(R.id.min)
 }

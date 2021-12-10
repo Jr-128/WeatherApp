@@ -103,11 +103,11 @@ class CityForecastFragment : Fragment(), ForecastDetailsClick {
             Pair("weather", forecast.weather[0].main),
             Pair("description", forecast.weather[0].description),
             Pair("pressure", forecast.main.pressure),
-            Pair("feels like", forecast.main.feelsLike),
+            Pair("feels_like", forecast.main.feelsLike),
             Pair("humidity", forecast.main.humidity),
             Pair("temp", forecast.main.temp),
-            Pair("max", forecast.main.tempMax),
-            Pair("min", forecast.main.tempMin)
+            Pair("temp_max", forecast.main.tempMax),
+            Pair("temp_min", forecast.main.tempMin)
         ))
     }
 }
