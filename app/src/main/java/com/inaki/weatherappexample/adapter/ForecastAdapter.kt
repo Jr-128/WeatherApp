@@ -46,7 +46,7 @@ class ForecastAdapter(
         holder.city.text = String.format(Locale.getDefault(), city?.name + ", " + city?.country)
 
         holder.itemView.setOnClickListener {
-            forecastDetailsClick.moveToForecastDetails(city?.name ?: "", forecast)
+            forecastDetailsClick.moveToForecastDetails(forecast)
         }
     }
 

@@ -1,7 +1,7 @@
 package com.inaki.weatherappexample.rest
 
 import com.inaki.weatherappexample.model.CityForecast
-import io.reactivex.*
+import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
 
@@ -14,11 +14,11 @@ interface NetworkApi {
     // https://api.openweathermap.org/data/2.5/forecast?q=atlanta&appid=65d00499677e59496ca2f318eb68c049
     @GET(WEATHER_FORECAST)
     // here we are doing query passing the exact name inside the parenthesis
-    fun getForecast(
+    suspend fun getForecast(
         @Query("q") cityName: String,
         // here we are assigning the API key because we don't want it to be changed
         @Query("appid") apiKey: String = API_KEY
-    ): Single<CityForecast>
+    ): Response<CityForecast>
 
 
     // observable: emitting data constantly (onNext, onComplete, onError)
