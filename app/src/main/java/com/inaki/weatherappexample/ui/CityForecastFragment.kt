@@ -100,10 +100,10 @@ class CityForecastFragment : Fragment(), ForecastDetailsClick {
 
     override fun moveToForecastDetails(cityName: String, forecast: Forecast) {
         findNavController().navigate(R.id.ForecastDetailsFragment, bundleOf(
-            Pair("weather", forecast.weather[0].main),
-            Pair("description", forecast.weather[0].description),
-            Pair("pressure", forecast.main.pressure),
-            Pair("feels_like", forecast.main.feelsLike),
+            Pair(WEATHER, forecast.weather[0].main),
+            Pair(DESCRIPTION, forecast.weather[0].description),
+            Pair(PRESSURE, forecast.main.pressure),
+            Pair(FEELS_LIKE, forecast.main.feelsLike),
             Pair("humidity", forecast.main.humidity),
             Pair("temp", forecast.main.temp),
             Pair("temp_max", forecast.main.tempMax),

@@ -14,14 +14,14 @@ import java.util.*
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 
-private const val WEATHER = "weather"
-private const val DESCRIPTION = "description"
-private const val PRESSURE = "pressure"
-private const val FEELS_LIKE = "feels_like"
-private const val HUMIDITY = "humidity"
-private const val TEMP = "temp"
-private const val MAX = "temp_max"
-private const val MIN = "temp_min"
+const val WEATHER = "weather"
+const val DESCRIPTION = "description"
+const val PRESSURE = "pressure"
+const val FEELS_LIKE = "feels_like"
+const val HUMIDITY = "humidity"
+const val TEMP = "temp"
+const val MAX = "temp_max"
+const val MIN = "temp_min"
 
 /**
  * A simple [Fragment] subclass.
@@ -80,7 +80,7 @@ class ForecastDetails : Fragment() {
 
         binding.weather1.text = weather
 
-        binding.description1.text = description!!
+        binding.description1.text = description
 
         binding.pressure1.text = pressure!!.toString()
 
@@ -112,19 +112,7 @@ class ForecastDetails : Fragment() {
          * @return A new instance of fragment ForecastDetails.
          */
         @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            ForecastDetails().apply {
-                arguments = Bundle().apply {
-                    putString(WEATHER, weather)
-                    putString(DESCRIPTION, description)
-                    putInt(PRESSURE, pressure!!)
-                    putDouble(FEELS_LIKE, feels_like!!)
-                    putInt(HUMIDITY, humidity!!)
-                    putDouble(TEMP, temp!!)
-                    putDouble(MAX, max!!)
-                    putDouble(MIN, min!!)
-                }
-            }
+        fun newInstance(param1: String, param2: String) = ForecastDetails()
     }
 
 }
